@@ -32,4 +32,4 @@ mod efficiency_ratio;
 pub use self::efficiency_ratio::EfficiencyRatio;
 
 mod relative_moving_average;
-pub use self::relative_moving_average::RelativeMovingAverage;
+pub use self::relative_moving_average::RollingMovingAverage;
