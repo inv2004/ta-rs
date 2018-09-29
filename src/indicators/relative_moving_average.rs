@@ -99,18 +99,18 @@ mod tests {
 
     #[test]
     fn test_next() {
-        let mut ema = RelativeMovingAverage::new(3).unwrap();
+        let mut rma = RelativeMovingAverage::new(3).unwrap();
 
-        assert_eq!(ema.next(2.0), 2.0);
-        assert_eq!(ema.next(5.0), 3.5);
-        assert_eq!(ema.next(1.0), 2.25);
-        assert_eq!(ema.next(6.25), 4.25);
+        assert_eq!(rma.next(2.0), 2.0);
+        assert_eq!(rma.next(5.0), 2.75);
+        assert_eq!(rma.next(1.0), 2.3125);
+        assert_eq!(rma.next(6.25), 3.296875);
 
-        let mut ema = RelativeMovingAverage::new(3).unwrap();
+        let mut rma = RelativeMovingAverage::new(3).unwrap();
         let bar1 = Bar::new().close(2);
         let bar2 = Bar::new().close(5);
-        assert_eq!(ema.next(&bar1), 2.0);
-        assert_eq!(ema.next(&bar2), 3.5);
+        assert_eq!(rma.next(&bar1), 2.0);
+        assert_eq!(rma.next(&bar2), 2.75);
     }
 
     #[test]
