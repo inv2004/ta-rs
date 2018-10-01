@@ -31,5 +31,5 @@ pub use self::moving_average_convergence_divergence::MovingAverageConvergenceDiv
 mod efficiency_ratio;
 pub use self::efficiency_ratio::EfficiencyRatio;
 
-mod relative_moving_average;
-pub use self::relative_moving_average::RollingMovingAverage;
+mod rolling_moving_average;
+pub use self::rolling_moving_average::RollingMovingAverage;
