@@ -60,6 +60,10 @@ impl SimpleMovingAverage {
             }
         }
     }
+
+    pub fn length(&self) -> u32 {
+        self.n
+    }
 }
 
 impl Next<f64> for SimpleMovingAverage {
